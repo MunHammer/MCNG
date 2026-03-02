@@ -105,7 +105,7 @@ You are not allowed to claim another utility if you haven't finished the one you
 - [ ] garpd
 - [ ] gawk
 - [ ] gcal
-- [ ] gcc
+- [X] MunHammer gcc
 - [ ] gcide
 - [ ] gcl
 - [ ] gcompris
