@@ -4,6 +4,10 @@ How to claim a util to create:
 e.g:
 `- [X] Banana-Man Bananana-creator`
 - [X] Banana-Man Bananana-creator
+You are not allowed to claim another utility if you haven't finished the one you're working on currenty
+
+
+[Explanations of the software](https://www.gnu.org/software/software.en.html#allgnupkgs)
 
 - [ ] 3dldf
 - [ ] 8sync
