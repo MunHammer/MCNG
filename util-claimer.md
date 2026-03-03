@@ -1,6 +1,7 @@
 How to claim a util to create:
 1. Change the `- [ ]` to `- [X]`
 2. Add your (user)name to the front
+3. Add the project to the README's in-progress projects
 e.g:
 `- [X] Banana-Man Bananana-creator`
 - [X] Banana-Man Bananana-creator
