@@ -9,22 +9,22 @@
   2. Add your name to the utility that you're contributing to.
   3. Contribute, add code, edit it, whatever
   4. Lint
-    - The Cargo.toml for rust projects must lint:
-      - lints.clippy.cargo
-      - lints.clippy.pedantic
-      - lints.rust.missing_docs
-    - You may stop some errors, but you may not be too excessive in your ignorance
-    1. If it's Rust, `cargo clippy`.
-    2. If it's C, `gcc -Wall`.
-    3. If there are any errors, go back to step 3.
+      - The Cargo.toml for rust projects must lint:
+          - lints.clippy.cargo
+          - lints.clippy.pedantic
+          - lints.rust.missing_docs
+      - You may stop some errors, but you may not be too excessive in your ignorance
+      - If it's Rust, `cargo clippy`.
+      - If it's C, `gcc -Wall`.
+      - If there are any errors, go back to step 3.
   5. Add the documentation
-    1. If it's Rust, `cargo doc`
-    2. If it's C, use doxygen (I haven't used doxygen)
+      - If it's Rust, `cargo doc`
+      - If it's C, use doxygen (I haven't used doxygen)
   4. Make a pull request to the main repo/branch
   5. Wait
-    1. A(nother) contributor will review your pull request
-    2. If it's merged, it's merged
-    3. If it isn't, go back to step 3
+     1. A(nother) contributor will review your pull request
+     2. If it's merged, it's merged
+     3. If it isn't, go back to step 3
   6. You're done!
 
 # Documentation
