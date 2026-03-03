@@ -3,8 +3,10 @@ How to claim a util to create:
 2. Add your (user)name to the front
 3. Add the project to the README's in-progress projects
 e.g:
+
 `- [X] Banana-Man Bananana-creator`
 - [X] Banana-Man Bananana-creator
+
 You are not allowed to claim another utility if you haven't finished the one you're working on currenty
 
 
