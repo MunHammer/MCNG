@@ -44,11 +44,12 @@
 - Makefile (for compiling the C code)
 
 ## The file structure will be as so:
+```
 .
-|-- README.md
-|-- COPYING
-|-- util-claimer.md
 |-- CONTRIBUTION.md
+|-- COPYING
+|-- README.md
+|-- util-claimer.md
 |-- docs
 |   |-- index.html
 |-- SingleProject
@@ -62,4 +63,5 @@
 |   |-- TODO.md
 |   |-- COPYING
 |   |-- makefile # If the tool is made in C or C++
-Another project, structured similarly
+|-- Another project, structured similarly
+```
