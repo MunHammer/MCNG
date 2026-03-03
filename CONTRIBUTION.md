@@ -31,6 +31,7 @@
 - The tutorials & end-user documentation must be made with [mdbook](https://github.com/rust-lang/mdBook)
 - Dev documentation for Rust is made with `cargo doc`
 - Dev documentation for C is made with doxygen
+- Other dev documentation is made with plain markdown
 
 # This project will use the following programming languages:
 ## Core langs
@@ -40,8 +41,10 @@
 - Typescript
 - HTML
 - CSS
+- Markdown
 ## Other
 - Makefile (for compiling the C code)
+- TOML (End user config files)
 
 ## The file structure will be as so:
 ```
