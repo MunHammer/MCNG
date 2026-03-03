@@ -2,7 +2,7 @@
 A GNU clone
 
 MCNG stands for:
-Motor car ain't GNU
+Motor car's not GNU
 
 ###### I (MunHammer) have no idea why we chose that name, it's just funny.
 
