@@ -12,7 +12,7 @@ We may also make other things as well
 
 This entire project, ironically, is put under the GNU GPL
 
-To commit, check out the [contribution rules](CONTRIBTUION.md)
+To commit, check out the [contribution rules](CONTRIBUTION.md)
 
 ## Completed utilities
 - None
