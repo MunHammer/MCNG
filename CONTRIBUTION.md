@@ -5,7 +5,7 @@
   - Just in case you didn't see the above
 ## To contribute:
   - Main must **always** be stable.
-  1. Make a fork/branch (branch if you're a contributor)
+  1. Make a fork/branch (branch if you're a contributor) (The branch should be named your username)
   2. Add your name to the utility that you're contributing to.
   3. Contribute, add code, edit it, whatever
   4. Lint
