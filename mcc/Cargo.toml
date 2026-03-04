@@ -1,0 +1,17 @@
+[package]
+name = "mcc"
+version = "0.1.0"
+edition = "2024"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/MunHammer/MCNG"
+keywords = ["collection", "compiler", "wip"]
+categories = ["compiler", "development-tools::build-utils"]
+description = "A GCC alternative (WIP)"
+
+[dependencies]
+
+[lints.clippy]
+cargo = "warn"
+pedantic = "warn"
+[lints.rust]
+missing_docs = "warn"
