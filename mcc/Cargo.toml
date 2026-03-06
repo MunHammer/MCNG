@@ -9,6 +9,10 @@ categories = ["compiler", "development-tools::build-utils"]
 description = "A GCC alternative (WIP)"
 
 [dependencies]
+clap = { version = "4.5.60", optional = true, features = ["derive"] }
+
+[features]
+cli = ["dep:clap"]
 
 [lints.clippy]
 cargo = "warn"
