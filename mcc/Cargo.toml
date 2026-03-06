@@ -10,6 +10,7 @@ description = "A GCC alternative (WIP)"
 
 [dependencies]
 clap = { version = "4.5.60", optional = true, features = ["derive"] }
+regex = "1.12.3"
 
 [features]
 cli = ["dep:clap"]
