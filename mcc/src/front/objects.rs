@@ -5,10 +5,7 @@ use std::fmt;
 
 /// A wrapper for a program's original source code
 #[derive(Debug)]
-pub struct Source {
-    /// The inner field
-    pub src: String,
-}
+pub struct Source(pub String);
 
 /// A matched character, such as:
 /// - <
@@ -67,26 +64,23 @@ pub enum Token {
 }
 
 /// A wrapper for a stream of tokens
-/// #[derive(Debug)]
-pub struct Stream {
-    /// The inner stream
-    pub stream: Vec<Token>,
-}
+#[derive(Debug)]
+pub struct Stream(pub Vec<Token>);
 
 // Random impls, such as new & stuff
 
 impl Stream {
     /// Appends an item to the back of the inner Vec<Token>
     pub fn push(&mut self, item: Token) {
-        self.stream.push(item);
+        self.0.push(item);
     }
 }
 
 impl Source {
-    /// Creates a new instance of a Source program
+    /// Creates a new instance of a [`Source`] program
     #[must_use]
     pub fn new(str: String) -> Self {
-        Self { src: str }
+        Self(str)
     }
 }
 
@@ -150,12 +144,12 @@ impl fmt::Display for Token {
 
 impl fmt::Display for Stream {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "{:?}", self.stream)
+        write!(f, "{:?}", self.0)
     }
 }
 
 impl fmt::Display for Source {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "{}", self.src)
+        write!(f, "{}", self.0)
     }
 }

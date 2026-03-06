@@ -72,14 +72,14 @@ impl Source {
     /// Lexes the program, turning it into a stream of tokens
     #[must_use]
     pub fn lex(mut self) -> Stream {
-        let mut out = Stream { stream: Vec::new() };
+        let mut out = Stream::new();
         loop {
-            if let Some(token) = Token::extract(&mut self.src) {
+            if let Some(token) = Token::extract(&mut self.0) {
                 out.push(token);
             } else {
-                self.src = String::from(self.src.trim_start());
+                self.0 = String::from(self.0.trim_start());
             }
-            if self.src.is_empty() {
+            if self.0.is_empty() {
                 break;
             }
         }
