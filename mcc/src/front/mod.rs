@@ -1,4 +1,7 @@
 //! The front end of the compiler
 pub mod lex;
 pub mod objects;
-pub use objects::{Keyword, Literal, Matched, Source, Stream, Token};
+pub mod parse;
+pub use objects::{
+    AST, Expr, FnDecl, Keyword, Literal, Matched, Source, Statement, Stream, Token, Type,
+};

@@ -54,7 +54,11 @@ mod cli {
         let program = front::Source::new(std::fs::read_to_string(cli.file).unwrap());
         println!("{program}");
         println!("Lexing...");
-        println!("{}", program.lex());
+        let lexed = program.lex();
+        println!("{lexed}");
+        println!("Parsing...");
+        let parsed = lexed.parse();
+        println!("{parsed:?}");
         todo!();
     }
 }

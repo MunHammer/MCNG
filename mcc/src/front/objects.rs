@@ -67,11 +67,82 @@ pub enum Token {
 #[derive(Debug)]
 pub struct Stream(pub Vec<Token>);
 
+// The AST Nodes
+/// The type of a identifier (function or var)
+#[derive(Debug)]
+pub enum Type {
+    /// The standard Signed, 4 byte integer
+    Int,
+    /// The standard no-type type
+    Void,
+}
+/// An expression
+#[derive(Debug)]
+pub enum Expr {
+    /// A constant integer
+    Const(usize),
+}
+/// A standard statement, terminated by a ;
+#[derive(Debug)]
+pub enum Statement {
+    /// The return keyword
+    Return(Expr),
+}
+
+/// The standard function declaration
+#[derive(Debug)]
+pub struct FnDecl {
+    /// The type of the function
+    pub r#type: Type,
+    /// The name of the function
+    pub name: String,
+    /// The arguments of the function
+    pub args: Vec<(Type, String)>,
+    /// The code inside the function
+    pub code: Vec<Statement>,
+}
+/// The root node for the AST
+#[derive(Debug)]
+pub struct AST(pub Vec<FnDecl>);
+
 // Random impls, such as new & stuff
+
+impl Default for AST {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
+impl Default for FnDecl {
+    fn default() -> Self {
+        Self::new()
+    }
+}
 
 impl Default for Stream {
     fn default() -> Self {
         Self::new()
+    }
+}
+
+impl AST {
+    /// Creates a new instance of [`AST`]
+    #[must_use]
+    pub fn new() -> Self {
+        Self(Vec::new())
+    }
+}
+
+impl FnDecl {
+    /// Creates a new instance of [`FnDecl`]
+    #[must_use]
+    pub fn new() -> Self {
+        Self {
+            r#type: Type::Void,
+            name: String::new(),
+            args: Vec::new(),
+            code: Vec::new(),
+        }
     }
 }
 
