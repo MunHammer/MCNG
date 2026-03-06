@@ -3,7 +3,7 @@
 #[cfg(feature = "cli")]
 mod cli {
     use clap::{Parser, ValueEnum};
-    use mcc::lexical_analysis;
+    use mcc::front;
     use std::path::PathBuf;
     #[cfg(not(target_os = "windows"))]
     const DEFAULT_OUT: &str = "a.out";
@@ -51,7 +51,7 @@ mod cli {
             "{} is not a valid input file",
             cli.file.display()
         );
-        let program = lexical_analysis::Source::new(std::fs::read_to_string(cli.file).unwrap());
+        let program = front::Source::new(std::fs::read_to_string(cli.file).unwrap());
         println!("{program}");
         println!("Lexing...");
         println!("{}", program.lex());
