@@ -69,8 +69,19 @@ pub struct Stream(pub Vec<Token>);
 
 // Random impls, such as new & stuff
 
+impl Default for Stream {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl Stream {
-    /// Appends an item to the back of the inner Vec<Token>
+    /// Creates a new instance of [`Stream`]
+    #[must_use]
+    pub fn new() -> Self {
+        Self(Vec::new())
+    }
+    /// Appends an item to the back of the inner `Vec<Token>`
     pub fn push(&mut self, item: Token) {
         self.0.push(item);
     }
