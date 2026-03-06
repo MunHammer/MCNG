@@ -149,6 +149,22 @@ impl Source {
     pub fn new(str: String) -> Self {
         Self { src: str }
     }
+    /// Lexes the program, turning it into a stream of tokens
+    #[must_use]
+    pub fn lex(mut self) -> Stream {
+        let mut out = Stream { stream: Vec::new() };
+        loop {
+            if let Some(token) = Token::extract(&mut self.src) {
+                out.push(token);
+            } else {
+                self.src = String::from(self.src.trim_start());
+            }
+            if self.src.is_empty() {
+                break;
+            }
+        }
+        out
+    }
 }
 
 impl fmt::Display for Keyword {

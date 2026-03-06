@@ -53,6 +53,8 @@ mod cli {
         );
         let program = lexical_analysis::Source::new(std::fs::read_to_string(cli.file).unwrap());
         println!("{program}");
+        println!("Lexing...");
+        println!("{}", program.lex());
         todo!();
     }
 }
